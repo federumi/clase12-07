@@ -1,0 +1,242 @@
+header
+{
+	background: yellow;
+	padding: 100px 0px;
+}
+
+h1
+{
+	font-size: 100px;
+}
+
+h4
+{
+	font-size: 50px;
+}
+
+@media screen and (max-width: 850px)
+{
+	h1
+	{
+		font-size: 70px;
+	}
+
+	header
+	{
+		background: cyan;
+	}
+
+}
+
+@media (max-width: 600px)
+{
+	header
+	{
+		background: pink;
+	}
+}
+
+.info p
+{
+	width: 48%;
+	padding: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+/*320 / 480 / 768 / 996 / 1020*/
+
+@media screen and (max-width: 650px)
+{
+	.info p
+	{
+		display: block;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px)
+{
+	.info p.solo-desktop
+	{
+		display: none;
+	}
+}
+
+	.info a.solo-mobile
+	{
+		display: none;
+	}
+
+@media screen and (max-width: 600px)
+{
+	.info a.solo-mobile
+	{
+		display: block;
+	}
+}
+
+.conflex
+{
+	display: flex;
+
+}
+.conflex article
+{
+	padding: 20px;
+}
+
+@media screen and (max-width: 600px)
+{
+	.conflex
+	{
+		flex-direction: column-reverse;
+	}
+	.conflex article:nth-child(2)
+	{
+		order: -1;
+	}
+}
+
+.link
+{
+	font-family: arial, helvetica, sans-serif;
+	color: white;
+	display: inline-block;
+	padding: 15px 30px;
+	background: magenta;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: 10s;
+}
+
+.link:hover
+{
+	background: red;
+	transform: rotate(3600deg);
+
+}
+
+
+
+@keyframes cambiocolor
+{
+	from{
+		background: red;
+	}
+
+	to{
+		background: blue;
+	}
+}
+
+.circulo
+{
+	display: inline-block;
+	background: red;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	animation-name: cambiocolor;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+.contenedor
+{
+	display: 	flex;	
+	justify-content: center;
+	margin: auto;
+	max-width: 940px;
+	    font-family: Arial, Helvetica, sans-serif;
+	    font-size: 18px;
+
+	
+}
+
+
+
+
+
+.listanav li
+{
+	display: inline-block;
+	margin: 0 10px;
+	width: 	120px;
+	background: 	rgba(0, 73, 112, 1);
+	text-align: 	center;	
+	color: 	white;
+	box-sizing: 	border-box;	
+
+}
+
+
+.logo1
+{
+	display: 	flex;
+	justify-content: 	space-between;	
+	margin-bottom: 40px;
+	margin-top: 60px;
+	padding-bottom: 20px;
+	box-sizing: 	border-box;	
+	border-bottom: solid rgba(0, 73, 112, 1);
+	
+
+}
+
+.listanav li.icono
+{
+	display: none;
+}
+
+@media screen and (max-width: 600px)
+{
+	.listanav li {
+		display: none;
+	}
+	.listanav li.icono
+	{
+		display: inline-block;
+	}
+
+
+}
+
+@keyframes rotaH
+{
+	from{
+	transform: rotate(0deg);
+	}
+	to
+	{
+		transform: rotate(360deg);
+
+	}
+
+}
+
+.maquina span.A
+{	display: inline-block;
+	animation-name: rotaH;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotaAH
+{
+	from{
+	transform: rotate(0deg);
+	}
+	to
+	{
+		transform: rotate(-360deg);
+
+	}
+}
+	.maquina span.B
+{	display: inline-block;
+	animation-name: rotaAH;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
